@@ -1,0 +1,45 @@
+献给	写作者的markdown 新手指南
+
+mkdir test
+cd test
+touch a.md
+git status
+git init
+git add
+git commit
+git log
+git branch
+git checkout a
+git checkout -b a 
+git merge
+git branch -d
+git branch -D
+git tag
+git tag v1.0  
+git checkout v1.0
+
+向github提交代码
+
+github提交代码基于SSH
+
+生成SSH key
+Linux 和 Mac 默认安装SSH ，windows 中安装了Git Bash就有ssh
+
+ssh //显示是否有ssh
+ssh-keygen -t rsa //会生成两个文件,id_rsa,id_rsa.pub ,前者为密钥,后者为公钥 //这两个文件是隐藏文件 XXX/.ssh目录下
+//将公钥添加至github中即可
+ssh -T git@github.com
+
+//push 和 pull 注意先push后pull
+git push origin master //把本地代码推到远程master分支
+git pull origin master
+
+//提交代码的两种方法
+
+//clone自己的项目
+git clone git@github.com:CFIcode/Test.git //这边是项目地址
+//方法2
+git remote add origin git@github.com:CFIcode/Test.git
+
+git remote -v
+git push origin master
